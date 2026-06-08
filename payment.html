@@ -173,6 +173,10 @@
                         <div class="payment-logo">
                             <img src="images/logo.png" alt="">
                         </div>
+                        <div class="selected-plan text-center mb-3">
+                            <h3 class="text-white" id="planName"></h3>
+                            <h2 class="text-white" id="planPrice"></h2>
+                        </div>
 
                         <!-- Heading -->
                         <div class="payment-content">
@@ -269,10 +273,9 @@
                             </div>
                             <div class="footer-social-links-prime">
                                 <ul>
-                                    <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="https://wa.me/919627777074"><i class="fa-brands fa-whatsapp"></i></a></li>
+                                    <li><a href="https://www.facebook.com/people/Rdfitnessdun/61569919161422/"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="https://www.instagram.com/reel/DDt8LFRB9hc/"><i class="fa-brands fa-instagram"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -375,6 +378,9 @@
             amount = 2000;
             planName = "Premium Pro Plan";
         }
+
+        document.getElementById("planName").innerText = planName;
+        document.getElementById("planPrice").innerText = "₹" + amount;
 
         document.getElementById("upiBtn").href =
             `upi://pay?pa=akhileshdabral6-1@oksbi&pn=${encodeURIComponent(planName)}&am=${amount}&cu=INR`;
