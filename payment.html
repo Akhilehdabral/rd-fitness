@@ -190,8 +190,7 @@
 
                         <!-- Pay Button -->
                         <div class="payment-btn">
-                            <a href="upi://pay?pa=akhileshdabral6-1@oksbi&pn=RD Fitness&am=499&cu=INR"
-                                class="btn-default btn-highlighted">
+                            <a href="#" id="upiBtn" class="btn-default btn-highlighted">
                                 Pay via UPI App
                             </a>
                         </div>
@@ -360,6 +359,26 @@
     <!-- Footer End -->
 
     <!-- Scripts -->
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const plan = params.get("plan");
+
+        let amount = 1000;
+        let planName = "Basic Fitness Plan";
+
+        if (plan === "standard") {
+            amount = 1500;
+            planName = "Standard Training Plan";
+        }
+
+        if (plan === "premium") {
+            amount = 2000;
+            planName = "Premium Pro Plan";
+        }
+
+        document.getElementById("upiBtn").href =
+            `upi://pay?pa=akhileshdabral6-1@oksbi&pn=${encodeURIComponent(planName)}&am=${amount}&cu=INR`;
+    </script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/circle-progress.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
