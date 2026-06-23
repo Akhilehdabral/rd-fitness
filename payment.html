@@ -190,7 +190,7 @@
 
                         <!-- QR Code -->
                         <div class="payment-qr">
-                            <img src="images/payment-qr.jpeg" alt="QR Code">
+                            <img src="images/client-barcode.jpeg" alt="QR Code">
                         </div>
 
                         <!-- Pay Button -->
@@ -341,7 +341,7 @@
                                         <li><img src="images/icon-mail-white.svg" alt=""><a
                                                 href="rdfitness@gmail.com">rdfitness@gmail.com</a></li>
                                         <li><img src="images/icon-location-white.svg" alt=""> Near Shiv Mandir Prakash
-                                            Tower, Mehuwala, Dehradun-248018, Uttarakhand</li>
+                                            Tower, Pithuwala Kalan, Dehradun-248018, Uttarakhand</li>
                                     </ul>
                                 </div>
                                 <!-- Footer Contact Item List End -->
@@ -370,16 +370,16 @@
         const params = new URLSearchParams(window.location.search);
         const plan = params.get("plan");
 
-        let amount = 1000;
+        let amount = 2700;
         let planName = "Basic Fitness Plan";
 
         if (plan === "standard") {
-            amount = 1500;
+            amount = 5500;
             planName = "Standard Training Plan";
         }
 
         if (plan === "premium") {
-            amount = 2000;
+            amount = 10000;
             planName = "Premium Pro Plan";
         }
 
