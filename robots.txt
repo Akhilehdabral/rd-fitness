@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rd-fitness-gym.netlify.app/sitemap.xml
